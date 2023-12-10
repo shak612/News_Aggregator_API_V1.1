@@ -12,27 +12,13 @@ exports.registerService = async (userData) => {
     
     try {
       const allUsersData = [...Users];
-      
-      if(!Validator.isEmpty(userData.fullName)){
-       response.message = "Name should not be empty!!"
-       return response;
-      }
+      const validate = Validator.validateRegisterForm(userData);
 
-      if(!Validator.isEmpty(userData.userName)){
-        response.message = "username should not be empty!!"
-        return response;
-       }
-
-      if(!Validator.isEmpty(userData.emailId)){
-        response.message = "EmailId should not be empty!!"
-        return response;
+      if(!validate.status){
+         console.log("Validate message!!!", validate.message)
+         response.message = validate.message;
+        return response; 
       }
-
-      if(!Validator.isEmpty(userData.password)){
-        response.message = "Password should not be empty!!"
-        return response;
-      }
-      
       
       const isUserNameUnique = allUsersData.some((user) => user.userName === userData.userName);
       const isEmailIdUnique = allUsersData.some((user) => user.emailId === userData.emailId);
