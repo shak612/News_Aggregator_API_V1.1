@@ -1,0 +1,26 @@
+[
+  {
+    "fullName": "Testing",
+    "userName": "testin1",
+    "emailId": "testing1@gmail.com",
+    "password": "$2b$08$ejbU9sLcPPzMQoWaoxV7Lu/NXD1N.6pN2anpCxNoTL6rznqR3UL1i",
+    "newsPreferences": { "categories": "sports", "sources": "bbc-news" },
+    "id": 1
+  },
+  {
+    "fullName": "Shakir",
+    "userName": "shakir123",
+    "emailId": "shakir123@gmail.com",
+    "password": "$2b$08$ejbU9sLcPPzMQoWaoxV7Lu/NXD1N.6pN2anpCxNoTL6rznqR3UL1i",
+    "newsPreferences": { "categories": "business", "sources": "bbc-news" },
+    "id": 2
+  },
+  {
+    "fullName": "Shakir",
+    "userName": "shakir1234",
+    "emailId": "shakir1234@gmail.com",
+    "password": "$2b$08$ejbU9sLcPPzMQoWaoxV7Lu/NXD1N.6pN2anpCxNoTL6rznqR3UL1i",
+    "newsPreferences": { "categories": "sports", "sources": "bbc-news" },
+    "id": 3
+  }
+]
