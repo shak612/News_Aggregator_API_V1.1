@@ -76,16 +76,19 @@ exports.Validator = {
        if(data !== undefined && data !== null && typeof data === 'string' && data !== "") return true;
        else return false;
     },
+
     isBoolean: (data) => {
         if(data !== undefined && typeof data === 'boolean') return true;
         else return false;
     },
+
     validateRegisterForm: (data) => {
         const validate = ajv.compile(registerFormSchema)
         const valid = validate(data)
         if (valid) return { status: true, message: "Valid!" }
         else return { status: false, message: "Invalid: " + ajv.errorsText(validate.errors) }
     },
+    
     validateLoginForm: (data) => {
         const validate = ajv.compile(loginFormSchema)
         const valid = validate(data)
