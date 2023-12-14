@@ -4,7 +4,6 @@
 
 let expect = require('chai').expect;
 let { Validator } = require('../../src/utils/validator');
-let userModel = require('../../src/models/usersModel.json');
 
 let userRegistration = {
     "fullName": "Testing",

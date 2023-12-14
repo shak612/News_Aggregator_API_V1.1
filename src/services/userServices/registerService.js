@@ -1,4 +1,5 @@
 const Users = require('../../models/usersModel.json');
+const UsersTesting = require('../../models/usersModelTesting.json');
 const fs = require('node:fs');
 const bcrypt= require('bcrypt');
 const path = require('path');
@@ -11,11 +12,10 @@ exports.registerService = async (userData) => {
     }
     
     try {
-      const allUsersData = [...Users];
+      const allUsersData = process.env.NODE_ENV == "testing" ? [...UsersTesting] : [...Users];
       const validate = Validator.validateRegisterForm(userData);
 
       if(!validate.status){
-         console.log("Validate message!!!", validate.message)
          response.message = validate.message;
         return response; 
       }
@@ -31,13 +31,13 @@ exports.registerService = async (userData) => {
         return response;
       }
 
-      userData['id'] = allUsersData[allUsersData.length - 1].id + 1;
+      userData['id'] = allUsersData[allUsersData.length - 1]?.id + 1;
       userData['password'] = bcrypt.hashSync(userData.password, 8)
       allUsersData.push(userData);
       
       const userToCreate = JSON.stringify(allUsersData);
-       
-      const filePath = path.join(__dirname, '../../models/usersModel.json')
+      const src = process.env.NODE_ENV == "testing" ? '../../models/usersModelTesting.json' : '../../models/usersModel.json' 
+      const filePath = path.join(__dirname, src)
       
       const writeFilePromise = async() => {
         return new Promise((resolve, reject) => {

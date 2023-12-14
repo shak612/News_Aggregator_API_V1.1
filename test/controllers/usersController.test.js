@@ -22,7 +22,6 @@ describe('POST /register', () => {
         };
     
         chai.request(server).post('/api/register').send(userRegistration).end((err, res) => {
-            console.log("resssssss", res.body)
             expect(res).to.have.status(200);
             expect(res.body).to.have.property('status').to.equal(true);
             expect(res.body).to.have.property('response').to.equal('Successfully registered!!');
@@ -31,28 +30,45 @@ describe('POST /register', () => {
       });
 
     it("2. Validating the User Registeration Controller - Validates the User Info Invalid", (done) => {
-        // userRegistration["id"] = 1;
-        // let response =  Validator.validateRegisterForm(userRegistration);
-        // expect(response.status).equal(false);
-        // expect(response.message).to.include("Invalid:");
-        done();
+      const userRegistration = {
+        fullName: 'Testingss',
+        userName:'',
+        emailId: 'testing123@gmail.com',
+        password: '12345678',
+        newsPreferences: { categories: 'sports', sources: 'bbc-news' },
+      };
+  
+      chai.request(server).post('/api/register').send(userRegistration).end((err, res) => {
+          expect(res).to.have.status(401);
+          expect(res.body).to.have.property('status').to.equal(false);
+          done();
+        });
     });
 })
 
-// This test is for login form:-
-// describe("Testing the validate Login Form functionality", function(){
-//     it("1. Validating the User Login Credentials - Validates the User Credentials Succefully", (done) => {
-//        let response =  Validator.validateLoginForm(userLogin);
-//        expect(response.status).equal(true);
-//        expect(response.message).equal("Valid!");
-//        done();
-//     });
 
-//     it("2. Validating the User Login Credentials - Validates the User Credentials is Invalid", (done) => {
-//         userLogin["password"] = "123";
-//         let response =  Validator.validateLoginForm(userLogin);
-//         expect(response.status).equal(false);
-//         expect(response.message).to.include("Invalid:");
-//         done();
-//     });
-// })
+// This test is for login form:-
+
+describe("'POST /login'", function(){
+
+    it("1. Validating the User Login Credentials - Validates the User Controller Credentials Succefully", (done) => {
+      const userRegistration = {
+        userName:'Testing',
+        password: '123445678',
+      };
+  
+      chai.request(server).post('/api/login').send(userRegistration).end((err, res) => {
+          expect(res).to.have.status(401);
+          expect(res.body).to.have.property('status').to.equal(false);
+          done();
+        });
+    });
+
+    it("2. Validating the User Login Credentials - Validates the User Controller Credentials is Invalid", (done) => {
+        userLogin["password"] = "123";
+        let response =  Validator.validateLoginForm(userLogin);
+        expect(response.status).equal(false);
+        expect(response.message).to.include("Invalid:");
+        done();
+    });
+});

@@ -1,0 +1,10 @@
+[
+  {
+    "fullName": "Testing",
+    "userName": "testin1",
+    "emailId": "testing1@gmail.com",
+    "password": "123445678",
+    "newsPreferences": { "categories": "sports", "sources": "bbc-news" },
+    "id": 1
+  }
+]
