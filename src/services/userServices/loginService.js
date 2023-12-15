@@ -1,4 +1,5 @@
 const Users = require('../../models/usersModel.json');
+const UsersTesting = require('../../models/usersModelTesting.json');
 const bcrypt = require('bcrypt');
 const { Validator } = require('../../utils/validator');
 const jwt = require('jsonwebtoken');
@@ -21,8 +22,9 @@ exports.loginService = async (userData) => {
         return response;
       }
        
-      const usersData = [...Users];
+      const usersData = process.env.NODE_ENV == "testing" ? [...UsersTesting] : [...Users];
       const findUserData = usersData.find((user) => user.userName == userData.userName)
+
       if(Object.keys(findUserData).length > 0){
         const result = bcrypt.compareSync(userData.password, findUserData.password)
         if(result){

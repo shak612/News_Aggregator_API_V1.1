@@ -1,18 +1,1 @@
-[
-  {
-    "fullName": "Testing",
-    "userName": "testin1",
-    "emailId": "testing1@gmail.com",
-    "password": "$2b$08$ejbU9sLcPPzMQoWaoxV7Lu/NXD1N.6pN2anpCxNoTL6rznqR3UL1i",
-    "newsPreferences": { "categories": "sports", "sources": "bbc-news" },
-    "id": 1
-  },
-  {
-    "fullName": "Shakir",
-    "userName": "shakir1234",
-    "emailId": "shakir123@gmail.com",
-    "password": "$2b$08$5I8cpzqZfjND/eUCmzwZFevIS4nWM.Sq1R/ntNU7dOtDhsSDNsTiu",
-    "newsPreferences": { "categories": "sports", "sources": "BBC" },
-    "id": 2
-  }
-]
+[{"fullName":"Testing","userName":"testin1","emailId":"testing1@gmail.com","password":"$2b$08$ejbU9sLcPPzMQoWaoxV7Lu/NXD1N.6pN2anpCxNoTL6rznqR3UL1i","newsPreferences":{"categories":"sports","sources":"bbc-news"},"id":1},{"fullName":"Shakir","userName":"shakir1234","emailId":"shakir123@gmail.com","password":"$2b$08$5I8cpzqZfjND/eUCmzwZFevIS4nWM.Sq1R/ntNU7dOtDhsSDNsTiu","newsPreferences":{"categories":"sports","sources":"BBC"},"id":2},{"fullName":"Testing","userName":"testin2","emailId":"testing2@gmail.com","password":"$2b$08$UU/gFS20hPWq0vn2Hsa1s.1gL6hWc7NpEZn5FKz7ugxRXr.b0ea76","newsPreferences":{"categories":"sports","sources":"bbc-news"},"id":3},{"fullName":"Testing","userName":"testin3","emailId":"testing3@gmail.com","password":"$2b$08$cZ/FDVy.vRUR583.1mcMVe9oWoHEROi/amXOcsxNzbGcWveGeeYzq","newsPreferences":{"categories":"sports","sources":"bbc-news"},"id":4},{"fullName":"Testingggggg","userName":"testin3333","emailId":"testing3333@gmail.com","password":"$2b$08$DmqjuJ2BPk.p6N6KdqzvVejdnd.zK/MTU9Pq4GglYg5fBXZKYSzty","newsPreferences":{"categories":"sports","sources":"bbc-news"},"id":5}]

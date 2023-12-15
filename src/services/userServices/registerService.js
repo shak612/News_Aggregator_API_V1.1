@@ -14,7 +14,7 @@ exports.registerService = async (userData) => {
     try {
       const allUsersData = process.env.NODE_ENV == "testing" ? [...UsersTesting] : [...Users];
       const validate = Validator.validateRegisterForm(userData);
-
+  
       if(!validate.status){
          response.message = validate.message;
         return response; 
