@@ -1,5 +1,5 @@
 # News Aggregator API
-Objective: Build a RESTful API that allows users to fetch news articles from multiple sources based on their preferences.
+Objective: Bookmyshow is a ticketing platform where you can book tickets for a movie show.
 
 ## Table of Contents
 
@@ -9,31 +9,26 @@ Objective: Build a RESTful API that allows users to fetch news articles from mul
 - [To Start Server](#startServer)
 
 ## Implementation
-- Review the project from Week 2 and identify potential security vulnerabilities.
-- Implement input validation and sanitization for user registration, event creation, and updates.
-- Optimize performance by implementing caching, which was implemented by me in previous week's optional extension.
-- Set up unit testing and write test cases for the API endpoints, focusing on testing input validation and proper functioning of CRUD operations but still I was not able to cover all the test cases
-- Refactored the API code to improve error handling, ensuring that appropriate error messages are returned for different types of errors (e.g., validation errors, authentication errors, authorization errors, and server errors).
-- Tested the API using Postman or Curl to ensure it works as expected and that the implemented security measures are effective.
+- As part of this assignment, we need to build API’s for the following feature. As a user, I can select any theatre in the city. On selecting the theatre, I should be able to see the dates of next 7 days.
+
+- I can click on any date and the page should load to give me all the movies in that theatre on that given date. Movies should contain details of all the showtimes.The image represents the feature described on 
+  the previous page.
+
+- You have to code the APIs along with appropriate table structures for powering this UI.
+
+- Expected output of this assignment will be code submitted on github PR for all three questions. Parts that need subjective answers should be added to a doc and pushed to the top level git directory.
+
+- It’s been 2 years since you built this API. The API overtime has become slow. Which columns would you index to improve the performance of the API ? Why ?
+
+- You have noticed that even after indexing the columns the API speed isn’t under 100 ms. Update the code of existing API to cache the appropriate data in the redis. What all data would you cache and why ?
+
+- Create an API to book seats for you and you friend for a given theatre and a show.
 
 ## Routes
 
-- POST api/register: Register a new user.
-- POST api/login: Log in a user.
-- GET api/preferences: Retrieve the news preferences for the logged-in user.
-- PUT api/preferences: Update the news preferences for the logged-in user.
-- GET api/news: Fetch news articles based on the logged-in user's preferences.
-- POST api/news/:id/read: Mark a news article as read.
-- POST api/news/:id/favorite: Mark a news article as a favorite.
-- GET api/news/read: Retrieve all read news articles.
-- GET api/news/favorites: Retrieve all favorite news articles.
-- GET api/news/search/:keyword Search article' based on keyword from title, description and content.
-- 
 ## Installation
 npm install
 
 ## To Start Server
 - cd src
 - run this command:- nodemon
-## To Run Test Cases
-- npm run test
