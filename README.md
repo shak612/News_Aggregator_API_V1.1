@@ -1,5 +1,5 @@
 # News Aggregator API
-Objective: Bookmyshow is a ticketing platform where you can book tickets for a movie show.
+Objective: In this project, we will create a RESTful API using Node.js, Express.js, and NPM packages. The API will allow users to register, log in, and set their news preferences (e.g., categories, sources). The API will then fetch news articles from multiple sources using external news APIs (e.g., NewsAPI). The fetched articles should be processed and filtered asynchronously based on user preferences.
 
 ## Table of Contents
 
@@ -9,20 +9,20 @@ Objective: Bookmyshow is a ticketing platform where you can book tickets for a m
 - [To Start Server](#startServer)
 
 ## Implementation
-- As part of this assignment, we need to build API’s for the following feature. As a user, I can select any theatre in the city. On selecting the theatre, I should be able to see the dates of next 7 days.
+- This assignment will be on top of previous week’s work. You need to make changes accordingly.
 
-- I can click on any date and the page should load to give me all the movies in that theatre on that given date. Movies should contain details of all the showtimes.The image represents the feature described on 
-  the previous page.
+- Review the project from Week 2 and identify potential security vulnerabilities.
 
-- You have to code the APIs along with appropriate table structures for powering this UI.
+- Implement input validation and sanitization for user registration, event creation, and updates.
 
-- Expected output of this assignment will be code submitted on github PR for all three questions. Parts that need subjective answers should be added to a doc and pushed to the top level git directory.
+- Optimize performance by implementing caching, if not done in the previous week's optional extension.
 
-- It’s been 2 years since you built this API. The API overtime has become slow. Which columns would you index to improve the performance of the API ? Why ?
+- Set up unit testing and write test cases for the API endpoints, focusing on testing input validation and proper functioning of CRUD operations. Make sure to achieve good test coverage and test edge cases.
 
-- You have noticed that even after indexing the columns the API speed isn’t under 100 ms. Update the code of existing API to cache the appropriate data in the redis. What all data would you cache and why ?
+- Refactor the API code to improve error handling, ensuring that appropriate error messages are returned for different types of errors (e.g., validation errors, authentication errors, authorization errors, and 
+  server errors).
 
-- Create an API to book seats for you and you friend for a given theatre and a show.
+- Test the API using Postman or Curl to ensure it works as expected and that the implemented security measures are effective.
 
 ## Routes
 
